@@ -13,9 +13,14 @@ namespace Stack
             stack.Push(2);
             stack.Push(3);
 
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            stack.DisplayStack();
+
+            Console.WriteLine("Object Removed: " + stack.Pop());
+            stack.DisplayStack();
+            Console.WriteLine("Object Removed: " + stack.Pop());
+            stack.DisplayStack();
+            Console.WriteLine("Object Removed: " + stack.Pop());
+            stack.DisplayStack();
 
             Console.WriteLine();
 
@@ -63,6 +68,18 @@ namespace Stack
             public void Clear()
             {
                 stackList.Clear();
+            }
+            public void DisplayStack()
+            {
+                //obj = stackList[currentIndex];
+                Console.Write("Current Stack: [");
+
+                for (int i = 0; i < stackList.Count; i++)
+                {
+                    Console.Write($" {stackList[i]} ");
+                }
+                Console.Write("]");
+                Console.WriteLine();
             }
         }
     }
