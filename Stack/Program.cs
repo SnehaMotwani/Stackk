@@ -11,11 +11,11 @@ namespace Stack
 
             stack.Push(1);
             stack.Push(2);
-            //stack.Push(3);
+            stack.Push(3);
 
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());
-            //Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
 
             Console.WriteLine();
 
@@ -42,16 +42,17 @@ namespace Stack
             }
             public object Pop()
             {
+                obj = stackList[currentIndex];
                 if (stackList.Count == 0)
                 {
                     Console.WriteLine("List is Empty");
                 }
                 else
                 {
-                    stackList.RemoveAt(stackList.Count - 1);
+                    stackList.Remove(obj);
                     currentIndex--;
                 }
-                return stackList[stackList.Count - 1];
+                return obj;
                 
             }
             public void Clear()
