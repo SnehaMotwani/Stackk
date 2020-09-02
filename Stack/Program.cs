@@ -32,8 +32,10 @@ namespace Stack
                 obj = aObj;
                 if(obj != null)
                 {
+                    //Console.WriteLine("Index before pushing : " + currentIndex);
                     currentIndex++;
                     stackList.Add(obj);
+                    //Console.WriteLine("Index after pushing : " + currentIndex);
                 }
                 else
                 {
@@ -49,8 +51,11 @@ namespace Stack
                 }
                 else
                 {
+                    //Console.WriteLine("Value of object: " + obj);
+                    //Console.WriteLine("Index before poping : " + currentIndex);
                     stackList.Remove(obj);
                     currentIndex--;
+                    //Console.WriteLine("Index after poping : " + currentIndex);
                 }
                 return obj;
                 
